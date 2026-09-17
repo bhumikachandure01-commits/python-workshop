@@ -10,6 +10,9 @@ class StudentManager:
 
     def view_students(self):
         """Display all students."""
+        if not self.students:
+            print("No students found.")
+            return
         for student in self.students:
             student.display()
 
