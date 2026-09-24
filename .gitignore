@@ -5,3 +5,13 @@ __pycache__/
 *.pyd
 .DS_Store
 
+# LaTeX build files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
