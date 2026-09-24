@@ -1,0 +1,115 @@
+\begin{frame}{Encapsulation — Controlling Access to Data}
+
+    \begin{columns}[T]
+
+        % ==================================================
+        % LEFT: STUDENT ATTRIBUTE
+        % ==================================================
+
+        \begin{column}{0.43\textwidth}
+
+            \begin{center}
+
+                \begin{tikzpicture}[
+                    font=\small
+                ]
+
+                    % Student object
+                    \node[
+                        draw=black,
+                        fill=WorkshopLightBlue,
+                        rounded corners=5pt,
+                        minimum width=5.8cm,
+                        minimum height=2.0cm,
+                        align=center
+                    ] (student) {
+                        \Large\textbf{Student}\\[6pt]
+                        Python Mark: \texttt{85}
+                    };
+
+                    % Controlled access
+                    \node[
+                        draw=WorkshopBlue,
+                        fill=white,
+                        rounded corners=4pt,
+                        minimum width=4.8cm,
+                        minimum height=0.75cm,
+                        below=0.45cm of student,
+                        align=center
+                    ] (method) {
+                        \textbf{update\_python\_mark()}
+                    };
+
+                    % Arrow
+                    \draw[
+                        ->,
+                        thick,
+                        WorkshopBlue
+                    ]
+                    (method.north)
+                    -- (student.south);
+
+                \end{tikzpicture}
+
+            \end{center}
+
+        \end{column}
+
+
+        % ==================================================
+        % RIGHT: EXPLANATION
+        % ==================================================
+
+        \begin{column}{0.54\textwidth}
+
+            \vspace{0.15cm}
+
+            \begin{itemize}
+
+                \item Protect the object's internal data
+
+                \vspace{0.25cm}
+
+                \item Control how data is changed
+
+                \vspace{0.25cm}
+
+                \item Put validation rules in one place
+
+                \vspace{0.25cm}
+
+                \item Prevent invalid state where possible
+
+            \end{itemize}
+
+        \end{column}
+
+    \end{columns}
+
+
+    \vfill
+
+    \begin{center}
+
+        \begin{tikzpicture}
+
+            \node[
+                draw=WorkshopLightBlue!80!black,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=13.8cm,
+                minimum height=0.75cm
+            ] {};
+
+            \node {
+                \large
+                \textbf{Encapsulation}
+                $\rightarrow$
+                Control how an object's data is accessed or changed
+            };
+
+        \end{tikzpicture}
+
+    \end{center}
+
+\end{frame}

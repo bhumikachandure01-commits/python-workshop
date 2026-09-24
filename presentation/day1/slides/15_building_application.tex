@@ -1,0 +1,78 @@
+\begin{frame}{Building the Application}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            stepbox/.style={
+                draw=WorkshopBlue,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=3.2cm,
+                minimum height=0.85cm,
+                align=center
+            }
+        ]
+
+            \node[stepbox] (model) {
+                \textbf{1. Student}\\
+                Model the data
+            };
+
+            \node[
+                stepbox,
+                right=0.45cm of model
+            ] (manager) {
+                \textbf{2. StudentManager}\\
+                Manage students
+            };
+
+            \node[
+                stepbox,
+                right=0.45cm of manager
+            ] (storage) {
+                \textbf{3. Storage}\\
+                Save / Load
+            };
+
+            \node[
+                stepbox,
+                below=0.55cm of manager
+            ] (main) {
+                \textbf{4. main.py}\\
+                Application flow
+            };
+
+            \draw[
+                ->,
+                thick,
+                WorkshopBlue
+            ]
+            (model) -- (manager);
+
+            \draw[
+                ->,
+                thick,
+                WorkshopBlue
+            ]
+            (manager) -- (storage);
+
+            \draw[
+                ->,
+                thick,
+                WorkshopBlue
+            ]
+            (manager) -- (main);
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vfill
+
+    \begin{center}
+        \large
+        \textbf{Build one component at a time, then connect them.}
+    \end{center}
+
+\end{frame}

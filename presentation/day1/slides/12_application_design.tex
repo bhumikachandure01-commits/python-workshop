@@ -1,0 +1,69 @@
+\begin{frame}{From Concepts to Application Design}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            concept/.style={
+                draw=WorkshopBlue,
+                fill=WorkshopLightBlue,
+                rounded corners=4pt,
+                minimum width=2.8cm,
+                minimum height=0.75cm,
+                align=center
+            }
+        ]
+
+            % Concepts
+            \node[concept] (functions) {Functions};
+            \node[concept, right=0.35cm of functions] (modules) {Modules};
+            \node[concept, right=0.35cm of modules] (oop) {OOP};
+            \node[concept, right=0.35cm of oop] (storage) {JSON / Storage};
+
+            % Arrow
+            \node[
+                below=0.55cm of modules,
+                font=\large\bfseries
+            ] (arrow) {
+                $\Downarrow$
+            };
+
+            % Application
+            \node[
+                draw=WorkshopBlue,
+                fill=WorkshopGreen,
+                rounded corners=6pt,
+                minimum width=7.5cm,
+                minimum height=1.1cm,
+                below=0.45cm of arrow,
+                font=\Large\bfseries
+            ] (application) {
+                Student Management System
+            };
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vspace{0.35cm}
+
+    \begin{itemize}
+
+        \item Functions organize reusable logic
+
+        \item Modules organize the code
+
+        \item OOP models the student and related entities
+
+        \item JSON provides persistence
+
+    \end{itemize}
+
+    \vfill
+
+    \begin{center}
+        \large
+        \textbf{Individual concepts become building blocks of an application.}
+    \end{center}
+
+\end{frame}

@@ -1,0 +1,160 @@
+\begin{frame}{OOP — Classes \& Objects}
+
+    \begin{columns}[T]
+
+        % ==================================================
+        % LEFT: UML DIAGRAM
+        % ==================================================
+
+        \begin{column}{0.42\textwidth}
+
+            \vspace{0.05cm}
+
+            \begin{center}
+
+                \begin{tikzpicture}[
+                    font=\small
+                ]
+
+                    % -------------------------------
+                    % Student header
+                    % -------------------------------
+
+                    \node[
+                        draw=black,
+                        fill=WorkshopLightBlue,
+                        minimum width=5.7cm,
+                        minimum height=0.85cm,
+                        rounded corners=3pt,
+                        font=\Large\bfseries
+                    ] (student) {
+                        Student
+                    };
+
+
+                    % -------------------------------
+                    % Attributes
+                    % -------------------------------
+
+                    \node[
+                        draw=black,
+                        fill=WorkshopLightBlue,
+                        minimum width=5.7cm,
+                        align=left,
+                        inner xsep=0.28cm,
+                        inner ysep=0.12cm,
+                        below=0pt of student
+                    ] (attributes) {
+                        \textbf{Attributes}\\[2pt]
+                        $-$ name\\
+                        $-$ age\\
+                        $-$ python\\
+                        $-$ mathematics\\
+                        $-$ communication
+                    };
+
+
+                    % -------------------------------
+                    % Methods
+                    % -------------------------------
+
+                    \node[
+                        draw=black,
+                        fill=WorkshopGreen,
+                        minimum width=5.7cm,
+                        align=left,
+                        inner xsep=0.28cm,
+                        inner ysep=0.12cm,
+                        below=0pt of attributes,
+                        rounded corners=3pt
+                    ] (methods) {
+                        \textbf{Methods}\\[2pt]
+                        $+$ calculate\_percentage()\\
+                        $+$ display()
+                    };
+
+                \end{tikzpicture}
+
+            \end{center}
+
+        \end{column}
+
+
+        % ==================================================
+        % RIGHT: EXPLANATION
+        % ==================================================
+
+        \begin{column}{0.54\textwidth}
+
+            \vspace{0.15cm}
+
+            \begin{itemize}
+
+                \item
+                A \textcolor{WorkshopBlue}{\textbf{class}}
+                defines the structure and behavior
+
+                \vspace{0.22cm}
+
+                \item
+                An \textcolor{WorkshopBlue}{\textbf{object}}
+                is an instance of a class
+
+                \vspace{0.22cm}
+
+                \item
+                Objects combine data (attributes) and
+                operations (methods)
+
+                \vspace{0.22cm}
+
+                \item
+                This helps us model real-world entities
+                in code
+
+            \end{itemize}
+
+        \end{column}
+
+    \end{columns}
+
+
+    % ==================================================
+    % BOTTOM SUMMARY
+    % ==================================================
+
+    \vfill
+
+    \begin{center}
+
+        \begin{tikzpicture}
+
+            \node[
+                draw=WorkshopLightBlue!80!black,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=12.8cm,
+                minimum height=0.75cm
+            ] {};
+
+            \node at (-3.0,0)
+            {
+                \large
+                \textbf{Class}
+                $\rightarrow$
+                Blueprint
+            };
+
+            \node at (3.0,0)
+            {
+                \large
+                \textbf{Object}
+                $\rightarrow$
+                Actual Student
+            };
+
+        \end{tikzpicture}
+
+    \end{center}
+
+\end{frame}

@@ -1,0 +1,76 @@
+\begin{frame}{Student Management System — Architecture}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            box/.style={
+                draw=WorkshopBlue,
+                rounded corners=5pt,
+                minimum width=3.4cm,
+                minimum height=1.0cm,
+                align=center
+            },
+            arrow/.style={
+                ->,
+                thick,
+                WorkshopBlue
+            }
+        ]
+
+            % Main application
+            \node[
+                box,
+                fill=WorkshopLightBlue
+            ] (main) {
+                \Large\textbf{main.py}\\
+                Application Flow
+            };
+
+            % Student
+            \node[
+                box,
+                fill=WorkshopGreen,
+                below left=1.0cm and 1.0cm of main
+            ] (student) {
+                \textbf{student.py}\\
+                Student
+            };
+
+            % Manager
+            \node[
+                box,
+                fill=WorkshopGreen,
+                below=1.0cm of main
+            ] (manager) {
+                \textbf{student\_manager.py}\\
+                CRUD Operations
+            };
+
+            % Storage
+            \node[
+                box,
+                fill=WorkshopGreen,
+                below right=1.0cm and 1.0cm of main
+            ] (storage) {
+                \textbf{storage.py}\\
+                JSON Persistence
+            };
+
+            % Connections
+            \draw[arrow] (main.south west) -- (student.north);
+            \draw[arrow] (main.south) -- (manager.north);
+            \draw[arrow] (main.south east) -- (storage.north);
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vfill
+
+    \begin{center}
+        \large
+        \textbf{Each component has a clear responsibility.}
+    \end{center}
+
+\end{frame}

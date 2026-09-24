@@ -1,0 +1,65 @@
+\begin{frame}{CRUD Operations — Managing Students}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            operation/.style={
+                draw=WorkshopBlue,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=2.6cm,
+                minimum height=1.15cm,
+                align=center
+            }
+        ]
+
+            \node[operation] (create) {
+                \Large\textbf{Create}\\[3pt]
+                Add Student
+            };
+
+            \node[
+                operation,
+                right=0.45cm of create
+            ] (read) {
+                \Large\textbf{Read}\\[3pt]
+                View / Find
+            };
+
+            \node[
+                operation,
+                right=0.45cm of read
+            ] (update) {
+                \Large\textbf{Update}\\[3pt]
+                Modify Student
+            };
+
+            \node[
+                operation,
+                right=0.45cm of update
+            ] (delete) {
+                \Large\textbf{Delete}\\[3pt]
+                Remove Student
+            };
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vspace{0.8cm}
+
+    \begin{center}
+        \Large
+        \textbf{CRUD}
+        $\rightarrow$
+        The basic operations needed to manage application data
+    \end{center}
+
+    \vfill
+
+    \begin{center}
+        \textbf{StudentManager} provides these operations for our application.
+    \end{center}
+
+\end{frame}

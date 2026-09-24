@@ -1,0 +1,81 @@
+\begin{frame}{Final Demonstration}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            demo/.style={
+                draw=WorkshopBlue,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=2.7cm,
+                minimum height=0.9cm,
+                align=center
+            }
+        ]
+
+            \node[demo] (add) {
+                \textbf{Add}\\
+                Student
+            };
+
+            \node[
+                demo,
+                right=0.45cm of add
+            ] (view) {
+                \textbf{View}\\
+                Students
+            };
+
+            \node[
+                demo,
+                right=0.45cm of view
+            ] (update) {
+                \textbf{Update}\\
+                Student
+            };
+
+            \node[
+                demo,
+                right=0.45cm of update
+            ] (delete) {
+                \textbf{Delete}\\
+                Student
+            };
+
+            \node[
+                draw=WorkshopBlue,
+                fill=WorkshopGreen,
+                rounded corners=6pt,
+                minimum width=6.5cm,
+                minimum height=0.9cm,
+                below=0.8cm of view,
+                font=\Large\bfseries
+            ] (persist) {
+                JSON Persistence
+            };
+
+            \draw[->, thick, WorkshopBlue]
+                (add) -- (view);
+
+            \draw[->, thick, WorkshopBlue]
+                (view) -- (update);
+
+            \draw[->, thick, WorkshopBlue]
+                (update) -- (delete);
+
+            \draw[->, thick, WorkshopBlue]
+                (view.south) -- (persist.north);
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vfill
+
+    \begin{center}
+        \Large
+        \textbf{From Python concepts to a working application}
+    \end{center}
+
+\end{frame}

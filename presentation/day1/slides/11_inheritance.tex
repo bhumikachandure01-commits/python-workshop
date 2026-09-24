@@ -1,0 +1,83 @@
+\begin{frame}{Inheritance — Reusing Common Behavior}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            classbox/.style={
+                draw=black,
+                rounded corners=4pt,
+                minimum width=3.8cm,
+                minimum height=1cm,
+                align=center
+            }
+        ]
+
+            % Parent class
+            \node[
+                classbox,
+                fill=WorkshopLightBlue
+            ] (person) {
+                \Large\textbf{Person}\\[3pt]
+                name,\ age
+            };
+
+            % Child classes
+            \node[
+                classbox,
+                fill=WorkshopGreen,
+                below left=1cm and 1.3cm of person
+            ] (student) {
+                \Large\textbf{Student}\\[3pt]
+                student\_id
+            };
+
+            \node[
+                classbox,
+                fill=WorkshopGreen,
+                below right=1cm and 1.3cm of person
+            ] (teacher) {
+                \Large\textbf{Teacher}\\[3pt]
+                subject
+            };
+
+            % Inheritance arrows
+            \draw[
+                ->,
+                thick
+            ]
+            (student.north)
+            -- (person.south west);
+
+            \draw[
+                ->,
+                thick
+            ]
+            (teacher.north)
+            -- (person.south east);
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vspace{0.2cm}
+
+    \begin{itemize}
+
+        \item Put common attributes and behavior in a parent class
+
+        \item Child classes inherit that common functionality
+
+        \item Child classes can add their own attributes and behavior
+
+    \end{itemize}
+
+    \vfill
+
+    \begin{center}
+        \textbf{Person}
+        $\rightarrow$
+        \textbf{Student / Teacher}
+    \end{center}
+
+\end{frame}

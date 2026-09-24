@@ -1,11 +1,87 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 
-\usetheme{Madrid}
-
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage[sfdefault]{FiraSans}
+
 \usepackage{booktabs}
 \usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% --------------------------------------------------
+% Colors
+% --------------------------------------------------
+
+\definecolor{WorkshopBlue}{RGB}{25,68,105}
+\definecolor{WorkshopLightBlue}{RGB}{225,238,249}
+\definecolor{WorkshopGreen}{RGB}{235,247,232}
+
+% --------------------------------------------------
+% Beamer appearance
+% --------------------------------------------------
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+
+\setbeamercolor{frametitle}{
+    fg=white,
+    bg=WorkshopBlue
+}
+
+\setbeamerfont{frametitle}{
+    size=\Large,
+    series=\bfseries
+}
+
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \begin{beamercolorbox}[
+        wd=\paperwidth,
+        ht=1.05cm,
+        dp=0.25cm,
+        leftskip=0.35cm
+    ]{frametitle}
+        \insertframetitle
+    \end{beamercolorbox}
+}
+
+% --------------------------------------------------
+% Footer
+% --------------------------------------------------
+\setbeamertemplate{footline}{
+    \leavevmode
+    \begin{beamercolorbox}[
+        wd=\paperwidth,
+        ht=0.42cm,
+        dp=0.15cm
+    ]{frametitle}
+
+        \hbox to \paperwidth{
+
+            \hspace{0.25cm}
+            \scriptsize
+            Chetan Adhikary \quad (Day 1)
+
+            \hfill
+
+            \scriptsize
+            Python Workshop
+
+            \hfill
+
+            \scriptsize
+            \insertframenumber
+
+            \hspace{0.25cm}
+
+        }
+
+    \end{beamercolorbox}
+}
+% --------------------------------------------------
+% Title information
+% --------------------------------------------------
 
 \title{Python Workshop}
 \subtitle{From Python Fundamentals to a Working Application}
@@ -17,5 +93,20 @@
 
 \input{slides/01_title}
 \input{slides/02_what_we_build}
+\input{slides/03_learning_journey}
+\input{slides/04_functions_why}
+\input{slides/05_modules_why}
+\input{slides/06_exceptions}
+\input{slides/07_files_json}
+\input{slides/08_json_to_application}
+\input{slides/09_oop_classes_objects}
+\input{slides/10_encapsulation.tex}
+\input{slides/11_inheritance.tex}
+\input{slides/12_application_design.tex}
+\input{slides/13_application_architecture.tex}
+\input{slides/14_crud_operations.tex}
+\input{slides/15_building_application.tex}
+\input{slides/16_final_demonstration.tex}
+\input{slides/17_day1_wrapup.tex}
 
 \end{document}

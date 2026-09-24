@@ -1,0 +1,68 @@
+\begin{frame}{Day 1 — What We Learned}
+
+    \begin{center}
+
+        \begin{tikzpicture}[
+            font=\small,
+            concept/.style={
+                draw=WorkshopBlue,
+                fill=WorkshopLightBlue,
+                rounded corners=5pt,
+                minimum width=2.7cm,
+                minimum height=0.75cm,
+                align=center
+            }
+        ]
+
+            \node[concept] (functions) {Functions};
+            \node[
+                concept,
+                right=0.35cm of functions
+            ] (modules) {Modules};
+            \node[
+                concept,
+                right=0.35cm of modules
+            ] (exceptions) {Exceptions};
+            \node[
+                concept,
+                right=0.35cm of exceptions
+            ] (files) {Files \& JSON};
+
+            \node[
+                concept,
+                below=0.45cm of modules
+            ] (oop) {OOP};
+
+            \node[
+                concept,
+                right=0.35cm of oop
+            ] (design) {Application Design};
+
+        \end{tikzpicture}
+
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{itemize}
+
+        \item We moved from individual Python concepts to an application
+
+        \item We used OOP to model real-world entities
+
+        \item We separated responsibilities using modules
+
+        \item We implemented CRUD operations and JSON persistence
+
+    \end{itemize}
+
+    \vfill
+
+    \begin{center}
+        \Large
+        \textbf{Python concepts}
+        $\longrightarrow$
+        \textbf{Working Application}
+    \end{center}
+
+\end{frame}
